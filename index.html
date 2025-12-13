@@ -36,6 +36,12 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
+        .section-title {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
         .card {
             background: white;
             border-radius: 15px;
@@ -65,6 +71,39 @@
             font-size: 14px;
             color: #888;
         }
+        .lang-section {
+            margin-top: 30px;
+        }
+        .lang-cards {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .lang-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+        .lang-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(232, 149, 111, 0.2);
+        }
+        .lang-card .flag {
+            font-size: 24px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .lang-card .lang-name {
+            font-size: 14px;
+            color: #E8956F;
+        }
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -87,13 +126,22 @@
     </div>
 
     <div class="container">
-        <a href="privacy.html" class="card">
-            <span class="card-icon">🔒</span>
-            <div class="card-content">
-                <h2>개인정보처리방침</h2>
-                <p>개인정보 수집 및 이용 안내</p>
-            </div>
-        </a>
+        <p class="section-title">개인정보처리방침 / Privacy Policy</p>
+
+        <div class="lang-cards">
+            <a href="privacy.html" class="lang-card">
+                <span class="flag">🇰🇷</span>
+                <span class="lang-name">한국어</span>
+            </a>
+            <a href="privacy-en.html" class="lang-card">
+                <span class="flag">🇺🇸</span>
+                <span class="lang-name">English</span>
+            </a>
+            <a href="privacy-ja.html" class="lang-card">
+                <span class="flag">🇯🇵</span>
+                <span class="lang-name">日本語</span>
+            </a>
+        </div>
     </div>
 
     <div class="footer">
