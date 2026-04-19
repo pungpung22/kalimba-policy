@@ -87,6 +87,20 @@
     </div>
 
     <div class="container">
+        <div class="card" style="background:#FFF8F1; border:1px solid #F4D9C0;">
+            <h2>📊 Google Play データセーフティ要約</h2>
+            <p>Google Play Consoleの「データセーフティ」フォームと1対1で対応する要約です。</p>
+            <ul>
+                <li><strong>収集:</strong> 広告ID、IPアドレス、アプリ操作イベント(すべて Google AdMob による自動収集)</li>
+                <li><strong>共有:</strong> 広告ID・IP・アプリイベント → Google AdMob (広告目的)</li>
+                <li><strong>収集しない:</strong> 氏名・メール・電話番号等の個人識別情報(会員登録・ログイン機能のないオフラインアプリ)</li>
+                <li><strong>データ販売(Sell):なし</strong></li>
+                <li><strong>通信経路の暗号化:</strong> HTTPS / TLS 1.2以上</li>
+                <li><strong>データ削除:</strong> アプリのアンインストール、またはデバイス設定からアプリデータを初期化</li>
+                <li><strong>対象年齢:</strong> 一般利用(楽器シミュレーター、Google Play Familiesポリシーの対象外)</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h2>1. 個人情報の収集について</h2>
             <div class="highlight">
@@ -104,6 +118,17 @@
                 <li>ユーザーが保存した楽譜データ</li>
             </ul>
             <p>このデータは外部サーバーに送信されず、アプリを削除すると一緒に削除されます。</p>
+
+            <h3>収集しない情報(最小収集の原則)</h3>
+            <ul>
+                <li><strong>個人識別情報:</strong> 氏名、メールアドレス、電話番号、生年月日、住所</li>
+                <li><strong>センシティブ情報:</strong> マイナンバー、クレジットカード、口座番号、生体情報、健康・宗教・政治情報</li>
+                <li><strong>通信データ:</strong> SMS、通話履歴、連絡先(アドレス帳)</li>
+                <li><strong>ハードウェア識別子:</strong> IMEI、MACアドレス、シリアル番号(AdMobが発行するリセット可能な広告IDのみ使用)</li>
+                <li><strong>位置情報:</strong> GPS、Wi-Fiベースの精密位置(AdMobによるIPベースの大まかな地域のみ)</li>
+                <li><strong>端末内ファイル:</strong> ギャラリー画像のスキャン、他アプリのデータ、インストール済みアプリの一覧</li>
+                <li><strong>リアルタイム入力:</strong> マイク録音(アプリ内の演奏録音は端末にのみ保存)、カメラ、キー入力、画面キャプチャ</li>
+            </ul>
         </div>
 
         <div class="card">
@@ -113,17 +138,33 @@
 
         <div class="card">
             <h2>4. 広告および分析ツール</h2>
-            <p>本アプリは現在、広告または分析ツール（Analytics）を使用していません。</p>
-            <p>今後広告が追加される場合、広告ネットワークのプライバシーポリシーが適用される可能性があります。その場合、本ポリシーを更新してお知らせします。</p>
+            <p>本アプリは<strong>Google AdMob</strong>を通じて広告を表示します。AdMobは広告配信のため以下の情報を収集する場合があります：</p>
+            <ul>
+                <li>デバイス識別子（広告ID / AAID / IDFA）</li>
+                <li>IPアドレス</li>
+                <li>アプリ使用イベント</li>
+            </ul>
+            <p>利用者は、デバイス設定の「広告IDのリセット/削除」（Android）または「Appからのトラッキング要求を許可」をオフ（iOS）にすることで、パーソナライズ広告を制限できます。</p>
+
+            <h3>AdMob広告パートナー</h3>
+            <p>AdMobはGoogleが承認した第三者広告ネットワーク（例: Meta Audience Network、AppLovin、Unity Ads等）を通じて入札・仲介する場合があります。</p>
+            <ul>
+                <li><a href="https://support.google.com/admob/answer/9012903" target="_blank" style="color:#E8956F;">Google認定の広告購入者および供給パートナー一覧</a></li>
+                <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" style="color:#E8956F;">Googleパートナーサイトおよびアプリの情報収集について</a></li>
+                <li><a href="https://policies.google.com/technologies/ads" target="_blank" style="color:#E8956F;">Google広告ポリシー</a></li>
+                <li><a href="https://policies.google.com/privacy" style="color: #E8956F;" target="_blank">Googleプライバシーポリシー</a></li>
+            </ul>
         </div>
 
         <div class="card">
-            <h2>5. データの削除</h2>
-            <p>デバイスに保存されたすべてのデータは、以下の方法で削除できます：</p>
+            <h2>5. データの削除（Google Play要件に準拠）</h2>
+            <p>本アプリはサーバーに個人情報を保存しないため、「アカウント」の概念は存在しません。すべてのデータは端末内にのみ保存され、以下の方法で即座に完全削除できます：</p>
             <ul>
-                <li>アプリの削除：デバイスからアプリを削除すると、すべてのデータが削除されます。</li>
-                <li>アプリデータの初期化：デバイスの設定からアプリデータを初期化できます。</li>
+                <li><strong>アプリの削除：</strong>デバイスからアプリを削除すると、すべてのデータが削除されます。</li>
+                <li><strong>アプリデータの初期化：</strong>デバイス設定 → アプリ → Kalimba → ストレージ → データを消去。</li>
+                <li><strong>広告IDのリセット：</strong>デバイス設定 → Google → 広告 → 広告IDを削除/リセットすることで、AdMob側の広告履歴がリセットされます。</li>
             </ul>
+            <p class="note" style="font-size:13px; color:#666;">参考: Google Play「<a href="https://support.google.com/googleplay/android-developer/answer/13327111" target="_blank" style="color:#E8956F;">アカウント削除</a>」要件はアカウントベースのアプリを対象としています。本アプリはアカウントを持たないため原則として本要件の対象外ですが、上記のとおり同等の削除経路を提供しています。</p>
         </div>
 
         <div class="card">

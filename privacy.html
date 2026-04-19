@@ -92,6 +92,20 @@
     </div>
 
     <div class="container">
+        <div class="card" style="background:#FFF8F1; border:1px solid #F4D9C0;">
+            <h2>📊 Google Play 데이터 보안 요약</h2>
+            <p>Google Play Console의 "데이터 보안(Data Safety)" 양식과 1:1로 매핑되는 요약입니다.</p>
+            <ul>
+                <li><strong>수집:</strong> 광고 ID, IP 주소, 앱 사용 이벤트 (모두 Google AdMob에 의한 자동 수집)</li>
+                <li><strong>공유:</strong> 광고 ID·IP·앱 이벤트 → Google AdMob (광고 목적)</li>
+                <li><strong>수집 안 함:</strong> 이름·이메일·전화번호 등 개인 식별 정보 일절 수집하지 않음 (회원가입/로그인 없는 오프라인 앱)</li>
+                <li><strong>데이터 판매(Sell): 없음</strong></li>
+                <li><strong>전송 구간 암호화:</strong> HTTPS/TLS 1.2 이상</li>
+                <li><strong>데이터 삭제 요청:</strong> 앱 삭제 또는 기기 설정에서 앱 데이터 초기화</li>
+                <li><strong>대상 연령:</strong> 전체 이용가 (악기 시뮬레이터, Google Play Families 정책 비대상)</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h2>1. 개인정보 수집 여부</h2>
             <div class="highlight">
@@ -109,6 +123,17 @@
                 <li>사용자가 저장한 악보 데이터</li>
             </ul>
             <p>이 데이터는 외부 서버로 전송되지 않으며, 앱을 삭제하면 함께 삭제됩니다.</p>
+
+            <h3>수집하지 않는 정보 (최소 수집 원칙)</h3>
+            <ul>
+                <li><strong>개인 식별 정보:</strong> 이름, 이메일, 전화번호, 생년월일, 주소</li>
+                <li><strong>민감정보:</strong> 주민등록번호, 신용카드, 계좌번호, 생체정보, 건강·종교·정치 정보</li>
+                <li><strong>통신 데이터:</strong> SMS, 통화 기록, 연락처(주소록)</li>
+                <li><strong>하드웨어 식별자:</strong> IMEI, MAC 주소, 시리얼 번호 (Google의 재설정 가능한 광고 ID만 AdMob이 사용)</li>
+                <li><strong>위치 정보:</strong> GPS, Wi-Fi 기반 정밀 위치 (AdMob의 IP 기반 대략적 지역만 해당)</li>
+                <li><strong>기기 내 파일:</strong> 갤러리 사진/동영상 스캔, 타 앱 데이터, 설치된 앱 목록</li>
+                <li><strong>실시간 입력:</strong> 마이크 녹음(앱 내 연주 녹음은 기기에만 저장), 카메라, 키 입력, 화면 캡처</li>
+            </ul>
         </div>
 
         <div class="card">
@@ -125,16 +150,27 @@
                 <li>IP 주소</li>
                 <li>앱 사용 정보</li>
             </ul>
-            <p>자세한 내용은 <a href="https://policies.google.com/privacy" style="color: #E8956F;" target="_blank">Google 개인정보처리방침</a>을 참조하세요.</p>
+            <p>이용자는 기기 설정의 "광고 ID 재설정/삭제"(Android) 또는 "추적 허용" 해제(iOS)를 통해 맞춤형 광고를 제한할 수 있습니다.</p>
+
+            <h3>AdMob 광고 파트너</h3>
+            <p>AdMob은 Google이 승인한 제3자 광고 네트워크(예: Meta Audience Network, AppLovin, Unity Ads 등)를 통해 입찰·중개할 수 있습니다.</p>
+            <ul>
+                <li><a href="https://support.google.com/admob/answer/9012903" target="_blank" style="color:#E8956F;">Google 인증 광고 구매자 및 공급 파트너 목록</a></li>
+                <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" style="color:#E8956F;">Google 파트너 사이트 및 앱의 정보 수집 방법</a></li>
+                <li><a href="https://policies.google.com/technologies/ads" target="_blank" style="color:#E8956F;">Google 광고 정책</a></li>
+                <li><a href="https://policies.google.com/privacy" style="color: #E8956F;" target="_blank">Google 개인정보처리방침</a></li>
+            </ul>
         </div>
 
         <div class="card">
-            <h2>5. 데이터 삭제</h2>
-            <p>기기에 저장된 모든 데이터는 다음 방법으로 삭제할 수 있습니다:</p>
+            <h2>5. 데이터 삭제 (Google Play 요구사항 준수)</h2>
+            <p>본 앱은 서버에 개인정보를 저장하지 않으므로 별도의 "계정 삭제" 개념이 존재하지 않습니다. 모든 데이터는 기기 내에만 저장되며, 아래 방법으로 즉시 완전 삭제됩니다:</p>
             <ul>
-                <li>앱 삭제: 기기에서 앱을 삭제하면 모든 데이터가 삭제됩니다.</li>
-                <li>앱 데이터 초기화: 기기 설정에서 앱 데이터를 초기화할 수 있습니다.</li>
+                <li><strong>앱 삭제:</strong> 기기에서 앱을 삭제하면 모든 데이터가 삭제됩니다.</li>
+                <li><strong>앱 데이터 초기화:</strong> 기기 설정 → 앱 → Kalimba → 저장공간 → 데이터 삭제.</li>
+                <li><strong>광고 ID 재설정:</strong> 기기 설정 → Google → 광고 → 광고 ID 삭제/재설정으로 AdMob에 저장된 광고 이력을 리셋할 수 있습니다.</li>
             </ul>
+            <p class="note" style="font-size:13px; color:#666;">참고: Google Play 「<a href="https://support.google.com/googleplay/android-developer/answer/13327111" target="_blank" style="color:#E8956F;">계정 삭제</a>」 요구사항은 계정 기반 앱을 대상으로 합니다. 본 앱은 계정이 없으므로 해당 요구사항이 원칙적으로 적용되지 않으나, 동등한 수준의 삭제 경로를 위와 같이 제공합니다.</p>
         </div>
 
         <div class="card">

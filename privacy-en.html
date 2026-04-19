@@ -87,6 +87,20 @@
     </div>
 
     <div class="container">
+        <div class="card" style="background:#FFF8F1; border:1px solid #F4D9C0;">
+            <h2>📊 Google Play Data Safety Summary</h2>
+            <p>This summary maps directly to the "Data Safety" form on Google Play Console.</p>
+            <ul>
+                <li><strong>Collected:</strong> Advertising ID, IP address, app interaction events (all automatic, via Google AdMob)</li>
+                <li><strong>Shared:</strong> Advertising ID, IP, app events → Google AdMob (for advertising)</li>
+                <li><strong>Not collected:</strong> name, email, phone number, or any personally identifiable information (offline app with no sign-up or login)</li>
+                <li><strong>No data sale:</strong> we do not sell personal information.</li>
+                <li><strong>Encrypted in transit:</strong> HTTPS / TLS 1.2+</li>
+                <li><strong>Data deletion:</strong> uninstall the app, or clear app data in device settings.</li>
+                <li><strong>Target audience:</strong> general audience (instrument simulator, not covered by the Google Play Families program)</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h2>1. Personal Information Collection</h2>
             <div class="highlight">
@@ -104,6 +118,17 @@
                 <li>Your saved sheet music</li>
             </ul>
             <p>This data is not transmitted to external servers and will be deleted when the app is uninstalled.</p>
+
+            <h3>Information we do NOT collect (data minimization)</h3>
+            <ul>
+                <li><strong>Personal identifiers:</strong> name, email, phone number, date of birth, address</li>
+                <li><strong>Sensitive data:</strong> national ID, credit card, bank account, biometric data, health / religious / political data</li>
+                <li><strong>Communications data:</strong> SMS, call history, contacts (address book)</li>
+                <li><strong>Hardware identifiers:</strong> IMEI, MAC address, serial number (only the resettable Advertising ID is used by AdMob)</li>
+                <li><strong>Location:</strong> GPS or Wi-Fi-based precise location (only coarse IP-based region is inferred by AdMob)</li>
+                <li><strong>On-device files:</strong> gallery scans, other apps' data, list of installed apps</li>
+                <li><strong>Real-time inputs:</strong> microphone (in-app recordings are saved locally only), camera, keystrokes, screen captures</li>
+            </ul>
         </div>
 
         <div class="card">
@@ -113,17 +138,33 @@
 
         <div class="card">
             <h2>4. Advertising and Analytics</h2>
-            <p>This app currently does not use any advertising or analytics tools.</p>
-            <p>If ads are added in the future, the privacy policy of the advertising network may apply. In such cases, this policy will be updated accordingly.</p>
+            <p>This app displays ads through <strong>Google AdMob</strong>. AdMob may collect the following for ad delivery:</p>
+            <ul>
+                <li>Device identifier (Advertising ID / AAID / IDFA)</li>
+                <li>IP address</li>
+                <li>App usage events</li>
+            </ul>
+            <p>You can limit personalized ads by resetting / deleting the Advertising ID (Android) or disabling "Allow Apps to Request to Track" (iOS).</p>
+
+            <h3>AdMob advertising partners</h3>
+            <p>AdMob may mediate or bid through Google-approved third-party ad networks (e.g., Meta Audience Network, AppLovin, Unity Ads).</p>
+            <ul>
+                <li><a href="https://support.google.com/admob/answer/9012903" target="_blank" style="color:#E8956F;">Google-certified ad buyers and supply partners</a></li>
+                <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" style="color:#E8956F;">How Google partner sites and apps use information</a></li>
+                <li><a href="https://policies.google.com/technologies/ads" target="_blank" style="color:#E8956F;">Google Ads Policy</a></li>
+                <li><a href="https://policies.google.com/privacy" style="color: #E8956F;" target="_blank">Google Privacy Policy</a></li>
+            </ul>
         </div>
 
         <div class="card">
-            <h2>5. Data Deletion</h2>
-            <p>All data stored on your device can be deleted by:</p>
+            <h2>5. Data Deletion (Google Play requirement)</h2>
+            <p>This app does not store personal information on any server, so there is no "account" concept. All data resides on your device and can be fully removed via:</p>
             <ul>
-                <li>Uninstalling the app: All data will be deleted when you remove the app from your device.</li>
-                <li>Clearing app data: You can clear app data from your device settings.</li>
+                <li><strong>Uninstall the app:</strong> removes all local data.</li>
+                <li><strong>Clear app data:</strong> Device Settings → Apps → Kalimba → Storage → Clear Data.</li>
+                <li><strong>Reset Advertising ID:</strong> Device Settings → Google → Ads → Reset or delete Advertising ID to reset AdMob profile.</li>
             </ul>
+            <p class="note" style="font-size:13px; color:#666;">Note: Google Play's <a href="https://support.google.com/googleplay/android-developer/answer/13327111" target="_blank" style="color:#E8956F;">Account deletion requirement</a> targets account-based apps. Since this app has no account, the requirement does not strictly apply, but an equivalent deletion path is provided above.</p>
         </div>
 
         <div class="card">
